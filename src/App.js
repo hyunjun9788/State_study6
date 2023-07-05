@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import Input from "./components/Input";
 import Result from "./components/Result";
 import './components/Input.css'
+import './components/Result.css'
 function App() {
 
     const [text, setText] = useState('')
