@@ -2,7 +2,7 @@ import React from "react";
 
 function Result(props){
     return(
-        <div className='result' style={props.style}>{props.children}</div>
+        <div className={props.className} style={props.style}>{props.children}</div>
     )
 }
 
