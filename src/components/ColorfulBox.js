@@ -1,22 +1,15 @@
 import {useState} from "react";
 import './ColorfulBox.css'
-function ColorfulBox({color,onClick}) {
-    const [currentColor, setCurrentColor] = useState(color)
-
-
-    const colorChangeHandler = () => {
-        setCurrentColor(prevColor => (prevColor === 'blue' ? 'white' : 'blue'))
-    }
+function ColorfulBox() {
+        const [clicked,setClicked] = useState(false)
+        const clickHandler =() =>{
+            setClicked(!clicked)
+        }
 
     return (
-        <div
-            className='colorful-box'
-            style={{ backgroundColor: currentColor }}
-            onClick={() => {
-                colorChangeHandler()
-                onClick()
-            }}
-        ></div>
+        <div className={`box ${clicked ? 'active' :''}`} onClick={clickHandler}>
+
+        </div>
     )
 }
 
